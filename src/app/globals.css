@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  /* color: white; */
+  /* background: #020817; */
+}
+
+@layer components {
+  .button{
+    @apply border px-5 py-1 md:px-8 rounded font-semibold transition duration-200 ease-out
+  }
+}
+
+.text-container {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.text-container h2 {
+  font-size: 2em;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+.text-container .text-gradient {  
+  color: transparent;
+  background-image: linear-gradient(to left, #094f7e, #7B68EE, #3498db, #2ecc71, #ff0000);
+  -webkit-background-clip: text;
+	background-clip: text;
+  animation: color 3s linear infinite;  
+  background-size: 500%; 
+  -webkit-transform: translate3d(0,0,0);
+	-webkit-backface-visibility: hidden;
+}
+@keyframes color {
+  from { 
+    background-position: 0%;
+  }
+	to { 
+    background-position: 100%; 
+  }
+}
+
+@layer utilities {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
